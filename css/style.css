@@ -1,0 +1,76 @@
+.card-pokemon-img img {
+  width: 40% !important;
+  margin: auto;
+  padding-top: 20px;
+}
+.np {
+  padding: 0 !important;
+}
+.mt20 {
+  margin-top: 75px;
+}
+.mt0 {
+  margin-top: 0;
+}
+.container-fluid {
+  padding: 0 10px;
+}
+.capital {
+  text-transform: capitalize;
+}
+.card-content {
+  height: 180px;
+  overflow-y: auto;
+}
+.text-center {
+  text-align: center;
+}
+.loading {
+  width: 90px;
+  position: fixed;
+  top: 120px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.col-card {
+  width: 200px;
+  float: left;
+  margin: 0 10px;
+}
+.checkbox_style {
+  margin-left: 3px;
+}
+.disabled {
+  cursor: not-allowed;
+}
+.full-modal {
+  width: 90% !important;
+  top: 10px;
+  max-height: 80% !important;
+}
+.modal.modal-fixed-footer {
+  height: 80% !important;
+}
+span.badge.new:after {
+    content: "";
+}
+.width-50 {
+  width: 50%;
+}
+.captured-label {
+  font-size: 10px;
+  padding: 0 10px;
+  height: 20px;
+  line-height: 18px;
+}
+.icon {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+}
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
