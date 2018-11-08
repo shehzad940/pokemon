@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Pokemon Game</title>
+    <meta charset="UTF-8">
+    <title>Pokemon Game</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -12,153 +12,153 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
 </head>
 <body>
-	<!-- navigation bar -->
-	<nav class="fixed-nav">
-		<ul id="dropdown1" class="dropdown-content">
-		    <li class="sorting_list" data-filter="name"><a href="javascript:;">Name</a></li>
-		    <li class="sorting_list" data-filter="height"><a href="javascript:;">Height</a></li>
-		    <li class="sorting_list" data-filter="experience"><a href="javascript:;">Experience</a></li>
-		</ul>
-	    <div class="nav-wrapper teal container-fluid">
-	        <a href="#" class="brand-logo">Pokemon Manager</a>
-	        <ul id="nav-mobile" class="right hide-on-med-and-down">
-		        <li id="show_home" class="active"><a href="javascript:;">Home</a></li>
-		        <li id="show_backpack"><a href="javascript:;">Backpack</a></li>
-		        <li id="show_comparison"><a class="disabled" href="javascript:;">Comparison View</a></li>
-				<li><a class="dropdown-trigger" href="javascript:;" data-target="dropdown1">Sort By<i class="material-icons right">arrow_drop_down</i></a></li>
-	        </ul>
-	    </div>
-	</nav>
-	<!-- nav ends -->
+    <!-- navigation bar -->
+    <nav class="fixed-nav">
+        <ul id="dropdown1" class="dropdown-content">
+            <li class="sorting_list" data-filter="name"><a href="javascript:;">Name</a></li>
+            <li class="sorting_list" data-filter="height"><a href="javascript:;">Height</a></li>
+            <li class="sorting_list" data-filter="experience"><a href="javascript:;">Experience</a></li>
+        </ul>
+        <div class="nav-wrapper teal container-fluid">
+            <a href="#" class="brand-logo">Pokemon Manager</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li id="show_home" class="active"><a href="javascript:;">Home</a></li>
+                <li id="show_backpack"><a href="javascript:;">Backpack</a></li>
+                <li id="show_comparison"><a class="disabled" href="javascript:;">Comparison View</a></li>
+                <li><a class="dropdown-trigger" href="javascript:;" data-target="dropdown1">Sort By<i class="material-icons right">arrow_drop_down</i></a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- nav ends -->
 
-	<div class="mt20">
-		<div class="">
-			<div class="items">
-			    <div id="home_container"></div>
-			</div>
-		</div>
-		<div class="">
-		    <div id="backpack_conainer"></div>
-		</div>
-	</div>
+    <div class="mt20">
+        <div class="">
+            <div class="items">
+                <div id="home_container"></div>
+            </div>
+        </div>
+        <div class="">
+            <div id="backpack_conainer"></div>
+        </div>
+    </div>
 
-	<!-- Loader start -->
-	<div class="loading">
-		<div class="preloader-wrapper big active" id="loader">
-		    <div class="spinner-layer spinner-blue-only">
-		        <div class="circle-clipper left">
-		        	<div class="circle"></div>
-		        </div>
-		        <div class="gap-patch">
-		        	<div class="circle"></div>
-		        </div>
-		        <div class="circle-clipper right">
-		        	<div class="circle"></div>
-		        </div>
-		    </div>
-	    </div>
-	</div>
+    <!-- Loader start -->
+    <div class="loading">
+        <div class="preloader-wrapper big active" id="loader">
+            <div class="spinner-layer spinner-blue-only">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Loader ends -->
 
-	<!-- Modal for showing detail of pokemon -->
-	<div id="detailed_pokemon_container" class="modal modal-fixed-footer">
-	    <div class="modal-content">
-	    	<div class="text-center">
-	    		<img src="" id="poke-img" />
-	    	</div>
-	    	<table class="highlight">
-	    		<tr>
-	    			<th>Name</th>
-	    			<td><span id="poke-name" class="capital"></span></td>
-	    		</tr>
-	    		<tr>
-	    			<th>Height</th>
-	    			<td><span id="poke-height"></span> hectograms</td>
-	    		</tr>
-	    		<tr>
-	    			<th>Weight</th>
-	    			<td><span id="poke-weight"></span> decimetre</td>
-	    		</tr>
-	    		<tr>
-	    			<th>Types</th>
-	    			<td><span id="poke-numtype"></span> (<span id="poke-type"></span>)</td>
-	    		</tr>
-	    		<tr>
-	    			<th>Abilities</th>
-	    			<td><span id="poke-numability"></span> (<span id="poke-ability"></span>)</td>
-	    		</tr>
-	    		<tr>
-	    			<th>Stats</th>
-	    			<td><span id="poke-numstats"></span> (<span id="poke-stats"></span>)</td>
-	    		</tr>
-	    		<tr>
-	    			<th>Moves</th>
-	    			<td><span id="poke-nummoves"></span> (<span id="poke-moves"></span>)</td>
-	    		</tr>
-	    	</table>
-	    </div>
-	    <div class="modal-footer modal-footer-left">
-            <button class="waves-effect waves-light btn capture_pokemon">Capture Pokemon</button>	
-            <button class="waves-effect waves-light btn" id="close_modal">Close</button>	
+    <!-- Modal for showing detail of pokemon -->
+    <div id="detailed_pokemon_container" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <div class="text-center">
+                <img src="" id="poke-img" />
+            </div>
+            <table class="highlight">
+                <tr>
+                    <th>Name</th>
+                    <td><span id="poke-name" class="capital"></span></td>
+                </tr>
+                <tr>
+                    <th>Height</th>
+                    <td><span id="poke-height"></span> hectograms</td>
+                </tr>
+                <tr>
+                    <th>Weight</th>
+                    <td><span id="poke-weight"></span> decimetre</td>
+                </tr>
+                <tr>
+                    <th>Types</th>
+                    <td><span id="poke-numtype"></span> (<span id="poke-type"></span>)</td>
+                </tr>
+                <tr>
+                    <th>Abilities</th>
+                    <td><span id="poke-numability"></span> (<span id="poke-ability"></span>)</td>
+                </tr>
+                <tr>
+                    <th>Stats</th>
+                    <td><span id="poke-numstats"></span> (<span id="poke-stats"></span>)</td>
+                </tr>
+                <tr>
+                    <th>Moves</th>
+                    <td><span id="poke-nummoves"></span> (<span id="poke-moves"></span>)</td>
+                </tr>
+            </table>
+        </div>
+        <div class="modal-footer modal-footer-left">
+            <button class="waves-effect waves-light btn capture_pokemon">Capture Pokemon</button>    
+            <button class="waves-effect waves-light btn" id="close_modal">Close</button>    
             <input type="hidden" id="current-pokemon-id" />
-	    </div>
+        </div>
     </div>
     <!-- Modal ends -->
 
     <!-- Modal for comparing detail of pokemon -->
-	<div id="compare_pokemon_container" class="modal full-modal modal-fixed-footer">
-	    <div class="modal-content">
-	    	<table class="highlight">
-	    		<tr>
-	    			<th>Picture</th>
-	    			<td class="width-50"><img id="poke-img-1" src="" /></td>
-	    			<td><img id="poke-img-2" src="" /></td>
-	    		</tr>
-	    		<tr>
-	    			<th>Name</th>
-	    			<td class="width-50"><span id="poke-name-1" class="capital"></span></td>
-	    			<td><span id="poke-name-2" class="capital"></span></td>
-	    		</tr>
-	    		<tr>
-	    			<th>Height</th>
-	    			<td class="width-50"><span id="poke-height-1"></span> hectograms</td>
-	    			<td><span id="poke-height-2"></span> hectograms</td>
-	    		</tr>
-	    		<tr>
-	    			<th>Weight</th>
-	    			<td class="width-50"><span id="poke-weight-1"></span> decimetre</td>
-	    			<td><span id="poke-weight-2"></span> decimetre</td>
-	    		</tr>
-	    		<tr>
-	    			<th>Types</th>
-	    			<td class="width-50"><span id="poke-numtype-1"></span> (<span id="poke-type-1"></span>)</td>
-	    			<td><span id="poke-numtype-2"></span> (<span id="poke-type-2"></span>)</td>
-	    		</tr>
-	    		<tr>
-	    			<th>Abilities</th>
-	    			<td class="width-50"><span id="poke-numability-1"></span> (<span id="poke-ability-1"></span>)</td>
-	    			<td><span id="poke-numability-2"></span> (<span id="poke-ability-2"></span>)</td>
-	    		</tr>
-	    		<tr>
-	    			<th>Stats</th>
-	    			<td class="width-50"><span id="poke-numstats-1"></span> (<span id="poke-stats-1"></span>)</td>
-	    			<td><span id="poke-numstats-2"></span> (<span id="poke-stats-2"></span>)</td>
-	    		</tr>
-	    		<tr>
-	    			<th>Moves</th>
-	    			<td class="width-50"><span id="poke-nummoves-1"></span> (<span id="poke-moves-1"></span>)</td>
-	    			<td><span id="poke-nummoves-2"></span> (<span id="poke-moves-2"></span>)</td>
-	    		</tr>
-	    		<tr>
-	    			<th></th>
-	    			<td><button class="waves-effect waves-light btn capture_from_compare" id="poke-id-1">Capture</button></td>
-	    			<td><button class="waves-effect waves-light btn capture_from_compare" id="poke-id-2">Capture</button></td>
-	    		</tr>
-	    	</table>
-	    </div>
-	    <div class="modal-footer modal-footer-left">
-            <button class="waves-effect waves-light btn" id="close_compare_modal">Close</button>	
-	    </div>
+    <div id="compare_pokemon_container" class="modal full-modal modal-fixed-footer">
+        <div class="modal-content">
+            <table class="highlight">
+                <tr>
+                    <th>Picture</th>
+                    <td class="width-50"><img id="poke-img-1" src="" /></td>
+                    <td><img id="poke-img-2" src="" /></td>
+                </tr>
+                <tr>
+                    <th>Name</th>
+                    <td class="width-50"><span id="poke-name-1" class="capital"></span></td>
+                    <td><span id="poke-name-2" class="capital"></span></td>
+                </tr>
+                <tr>
+                    <th>Height</th>
+                    <td class="width-50"><span id="poke-height-1"></span> hectograms</td>
+                    <td><span id="poke-height-2"></span> hectograms</td>
+                </tr>
+                <tr>
+                    <th>Weight</th>
+                    <td class="width-50"><span id="poke-weight-1"></span> decimetre</td>
+                    <td><span id="poke-weight-2"></span> decimetre</td>
+                </tr>
+                <tr>
+                    <th>Types</th>
+                    <td class="width-50"><span id="poke-numtype-1"></span> (<span id="poke-type-1"></span>)</td>
+                    <td><span id="poke-numtype-2"></span> (<span id="poke-type-2"></span>)</td>
+                </tr>
+                <tr>
+                    <th>Abilities</th>
+                    <td class="width-50"><span id="poke-numability-1"></span> (<span id="poke-ability-1"></span>)</td>
+                    <td><span id="poke-numability-2"></span> (<span id="poke-ability-2"></span>)</td>
+                </tr>
+                <tr>
+                    <th>Stats</th>
+                    <td class="width-50"><span id="poke-numstats-1"></span> (<span id="poke-stats-1"></span>)</td>
+                    <td><span id="poke-numstats-2"></span> (<span id="poke-stats-2"></span>)</td>
+                </tr>
+                <tr>
+                    <th>Moves</th>
+                    <td class="width-50"><span id="poke-nummoves-1"></span> (<span id="poke-moves-1"></span>)</td>
+                    <td><span id="poke-nummoves-2"></span> (<span id="poke-moves-2"></span>)</td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td><button class="waves-effect waves-light btn capture_from_compare" id="poke-id-1">Capture</button></td>
+                    <td><button class="waves-effect waves-light btn capture_from_compare" id="poke-id-2">Capture</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="modal-footer modal-footer-left">
+            <button class="waves-effect waves-light btn" id="close_compare_modal">Close</button>    
+        </div>
     </div>
     <!-- Modal ends -->
 </body>
